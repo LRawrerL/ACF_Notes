@@ -6,3 +6,6 @@ Super comprehensive notes for Amazon's Cloud Foundation Certification
 - I am a mild masochist
 ## Updates??
 - Depends on my mood 
+### Glitches when trying to read on github
+- Mainly written on obsidian
+- Will see visual artifacts with callouts
