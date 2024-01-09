@@ -1,4 +1,4 @@
-## Section 1 AWS shared responsibility model
+ ## Section 1 AWS shared responsibility model
 Security and compliance responsibility is shared between AWS and the customer
 
 AWS:
@@ -87,7 +87,7 @@ A collection of IAM users have **identical authorization**
 - Groups cannot be nested
 
 IAM policy:
-Document that defines permissions of resource access and they can be done with them
+Document that defines permissions of resource access and what they can be done with them
 
 IAM role:
 Tool for granting temporary access to specific AWS resources in an AWS account 
@@ -117,7 +117,7 @@ Management console access:
 
 ##### MFA
 Provides increased security
-- Users and systems must provide an **MFA token** in addition to singing in
+- Users and systems must provide an **MFA token**in addition to signing in
 
 Generating token:
 - Virtual MFA-compliant applications
@@ -132,7 +132,6 @@ Generating token:
 >- Yubikey
 >Hardware MFA options:
 >- Key fob or display card offered by Gemalto
-
 
 ### Authorization
 It is the process after authentication of determining what permissions a user, service, or application have.
@@ -172,10 +171,11 @@ The basic structure of the statements in an IAM Policy is:
 >![](https://i.imgur.com/weh3yOU.png)
 >Explicit denies in policies take precedence over allow statements
 
-There are two types of IAM polices:
+There are two types of IAM policies:
 1. Identity-based policies 
 2. Resource-based policies
 
+<!-- Stopped here for flash cards -->
 #### Identity-based policies
 These are policies that you attach to a **user, group, roles.**
 - Control what actions they can perform 
@@ -274,7 +274,7 @@ Customer master key (CMKs):
 - Has Customer Master Keys (CMK) to control access to data encryption keys that encrypt and decrypt data
 #### Cognito
 Provides solution to control access to AWS resource from application
-- Adds user sign-up, sing-up, and access control to web and mobile application
+- Adds user sign-in, sign-up, and access control to web and mobile application
 - Huge scaling
 - Support sign in through social identity providers like google etc. 
 - Available globally on edge locations 
@@ -298,7 +298,7 @@ Data at rest:
 #### Encryption in transit
 Data in transit:
 - Moving across network 
-- Use Transporter Layer Security (TLS)
+- Use Transport Layer Security (TLS)
 - Certificate Manager provides a way to manage, deploy, and renew TLS cert 
 - Data moving over HTTPS is secured using TLS or SSL
 #### Securing S3 buckets and objects

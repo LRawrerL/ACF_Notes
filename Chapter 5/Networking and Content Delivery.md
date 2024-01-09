@@ -181,7 +181,7 @@ Setting up:
 
 Restrictions:
 - IP address ranges cannot overlap
-- Transitive peering it not supported
+- Transitive peering is not supported
 - Only one peering resource between two same VPCS
 >[!example] Example of transitive peering
 >```mermaid
@@ -267,7 +267,7 @@ Security Groups:
 >- Custom SG
 ## Network Access Control List (Network ACLs)
 It is a optional layer of security for VPC
-- Acts as a firewall controlling traffic for one ore more subnets
+- Acts as a firewall controlling traffic for one or more subnets
 - Each subnet must be associated with a ACL
 - If not associated it will automatically be to a default network ACL
 - A subnet can have 1 ACL
@@ -307,7 +307,7 @@ It is a highly available and scalable cloud [[DNS]] web service
 ## Supported routing
 1. Simple Routing
 - Use for single-server environments 
-- 1 domain name can be routed to x different IP addresses, it will randomly choose an addressed
+- 1 domain name can be routed to x different IP addresses, it will randomly choose an address
 
 2. Weighted Round Robin Routing
 - Assign weights to resource record to specify frequency with which different responses are served 
@@ -367,7 +367,6 @@ A fast, global, and secure CDN service that is Highly Programmable and Deeply in
 - Pay-as-you-go pricing
 - Global network and edge locations and Regional edge caches
 - Caches our applications into edge locations
-
 
 Edge locations:
 - A network of data centers that CloudFront uses to serve popular content quickly to customers.
