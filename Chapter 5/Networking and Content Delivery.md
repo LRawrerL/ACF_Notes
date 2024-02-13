@@ -4,8 +4,10 @@ A computer [[network]] is >= two machines connected to share information
 - Can be logically split into *subnets*
 - Requires [[routers]] or [[Switches]] to connect clients together 
 
->[!example]- Simple network diagram
->![](https://i.imgur.com/bqSrVI4.png)
+>[!NOTE]
+> <h3>Simple network diagram</h3><br>
+> <img src="https://i.imgur.com/bqSrVI4.png" alt="">
+
 ## IP addresses
 Every client machine in a network has a unique IP to identify it
 - Numerical label -> `192.0.2.0`
@@ -31,13 +33,14 @@ A common method to describe networks is CIDR
 - Followed by a `/`
 - Number of network bits
 
->[!example] How a CIDR IP address looks like
->![](https://i.imgur.com/4KkoduO.png)
->- `24` tells us the first 24 bits are fixed for the network portion
->- The last `32-24 = 8` bits are used to identify hosts
->- Means network can range from `192.0.2.0` -> `192.0.2.255`
->- When the host portion is all 1 -> `192.0.2.255`it means this is the broadcast address
->- When the host portion is all 0 -> `192.0.2.0` it means this is the network address
+>[!NOTE]
+> <h3>How a CIDR IP address looks like</h3>
+> <img src="https://i.imgur.com/4KkoduO.png" alt=""><br>
+> <code>24</code> tells us the first 24 bits are fixed for the network portion <br>
+> The last <code>32-24 = 8</code> bits are used to identify hosts<br>
+> Means network can range from <code>192.0.2.0</code> -> <code>192.0.2.255</code><br>
+> When the host portion is all 1 -> <code>192.0.2.255</code> it means this is the broadcast address<br>
+> When the host portion is all 0 -> <code>192.0.2.0</code> it means this is the network address<br>
 
 Two special cases:
 - A fixed IP address `192.0.2.0/32` which is used to set up a firewall rule and give access to a specific host
@@ -80,8 +83,10 @@ VPCs Subnets:
 - Subnets are classified as public or private 
 - Public subnets has access to internet while private does not
 
->[!example]- Image showing a VPC in a region
->![](https://i.imgur.com/sPfvQsi.png)
+>[!NOTE]
+> <h3>Image showing a VPC in a region</h3>
+> <img src="https://i.imgur.com/sPfvQsi.png">
+
 ## IP Addressing
 When creating a VPC can assign it either `IPv4` or `IPv6` CIDR block
 - Cannot change address range after you create VPC 
@@ -96,13 +101,15 @@ A CIDR block requires you to reserve five IP addresses within the block
 - Future use
 - Network broadcast address
 
->[!important] Example of a VPC with 4 subnets
->![](https://i.imgur.com/vyob4AV.png)
->`10.0.0.0` -> Network Address
->`10.0.0.1` -> Internal Communication
->`10.0.0.2` -> DNS
->`10.0.0.3` -> Future use
->`10.0.0.255` -> Broadcast Address
+>[!IMPORTANT]
+> <h3>Example of a VPC with 4 subnets</h3>
+> <img="https://i.imgur.com/vyob4AV.png" alt=""><br>
+> <code>10.0.0.0</code> -> Network Address<br>
+> <code>10.0.0.1</code> -> Internal Communication<br>
+> <code>10.0.0.2</code> -> DNS<br>
+> <code>10.0.0.3</code> -> Future use<br>
+> <code>10.0.0.255</code> -> Broadcast Address
+
 ### Public IP Address Types
 When creating a VPC, every instance in it gets a private IP address automatically
 
@@ -121,11 +128,13 @@ It is a virtual network interface that can attach or detach from an instance in 
 - When you move the interface from one instance to another, network traffic is redirected
 - Each instance in your VPC has a default network interface that is assigned a private IPv4 address from the IPv4 address range of your VPC
 
->[!info] More understanding
->- A secondary “port”, it can be attached to an instance (instance can have >2 IP addr to access it ) 
->- Needs to have an IP address assigned to it 
->- Ensure redundancy as we can assign a elastic IP to it 
->- can attach/detach address to another instance if one fails (user can access another server if 1 fails), redirection of traffic
+>[!NOTE]
+> <h3>More understanding</h3>
+>- A secondary “port”, it can be attached to an instance (instance can have >2 IP addr to access it ) <br>
+>- Needs to have an IP address assigned to it <br>
+>- Ensure redundancy as we can assign a elastic IP to it <br>
+>- can attach/detach address to another instance if one fails (user can access another server if 1 fails), redirection of traffic <br>
+
 ### Routes Tables and Routes
 Route tables contain a set of rules (routes) that directs network traffic from your subnet 
 - Each **route** specifies a destination and target
@@ -146,7 +155,10 @@ It is a scalable, redundant and highly available VPC component
 - Allows communication between instances in VPC and the internet 
 - Perform NAT (network address translation) for instances with IPv4 
 
->[!example] Example of a internet gateway ![](https://i.imgur.com/pIIh2vL.png)
+>[!NOTE]
+> <h3>Example of an internet gateway</h3>
+> <img src="https://i.imgur.com/pIIh2vL.png" alt="">
+
 ## NAT gateway
 It enables instances in a VPC private subnet to connect to internet or other services.
 - One way connection only
@@ -156,8 +168,10 @@ Creating a NAT gateway:
 - Specify Elastic IP address to associate with it
 - Update route table associated to private subnets to point traffic to it
 
->[!example] Example of a NAT gateway setup
->![](https://i.imgur.com/aCgVIiq.png)
+>[!NOTE]
+> <h3>Example of a NAT gateway setup</h3>
+> <img src="https://i.imgur.com/aCgVIiq.png" alt="">
+
 ## VPC sharing
 This allows sharing of subnets with other accounts in the same organization using AWS Orgs.
 - Host account makes a VPC and assign accounts in organization to a subnet
@@ -170,8 +184,10 @@ Benefits:
 - No hard limits
 - Optimized costs
 
->[!example] Example of a VPC sharing model
->![](https://i.imgur.com/CTmCVRT.png)
+>[!NOTE]
+> <h3>Example of a VPC sharing model</h3>
+> <img src="https://i.imgur.com/CTmCVRT.png">
+
 ## VPC peering
 It is a networking connection between two VPCs for private communication
 - Can be for own VPCs, another account, or different region
@@ -193,8 +209,10 @@ A ---> C
 >- A communicates with C
 >- B communicates with C via A
 
->[!example] Example of a VPC peering model
->![](https://i.imgur.com/tUKboFW.png)
+>[!NOTE]
+> <h3>Example of a VPC peering model</h3>
+> <img src="https://i.imgur.com/tUKboFW.png" alt="">
+
 ## AWS Site-to-Site VPN
 By default instances inside VPC cannot communicate with a remote network
 - Slow data transfer rates
@@ -208,16 +226,20 @@ To connect VPC to remote network:
 4. Establish an AWS Site-to-Site VPN to link two system together
 5. Configure routing to pass traffic through connection
 
->[!example] Example of a Site-to-Site VPN
->![](https://i.imgur.com/cxmuEcZ.png)
+>[!NOTE]
+> <h3>Example of a Site-to-Site VPN</h3>
+> <img src="https://i.imgur.com/cxmuEcZ.png" alt="">
+
 ## AWS Direct Connect
 Used to have faster performance (over long distances)
 - Dedicated and private connection between on-premise and AWS
 - Replaces VPN for hybrid cloud infrastructure
 - Does not encrypt network path by default 
 
->[!example] Example of direct connect
->![](https://i.imgur.com/PIbqG3Y.png)
+>[!NOTE]
+> <h3>Example of direct connect</h3>
+> <img src="https://i.imgur.com/PIbqG3Y.png" alt="">
+
 ## VPC endpoints
 A virtual device that enables private connection from VPC to supported services and VPC endpoint services that are powered by AWS PrivateLink
 - Does not require much setup or require a public IP address to communicate
@@ -234,8 +256,10 @@ Interface endpoint:
 Gateway endpoint:
 - No additional charge but only for S3 and Dynamo DB
 
->[!example] Example of VPC endpoint model
->![](https://i.imgur.com/OpwyZMS.png)
+>[!NOTE]
+> <h3>Example of VPC endpoint model</h3>
+> <img src="https://i.imgur.com/OpwyZMS.png" alt="">
+
 ## AWS Transit Gateway
 VPC Peering is point to point which causes connections to grow quickly
 - A bit more difficult to scale
@@ -245,8 +269,10 @@ VPC Peering is point to point which causes connections to grow quickly
 Transit Gateway:
 - Simplify network model and management (become hub and spoke model)
 
->[!example] Example of a transit gateway
->![](https://i.imgur.com/uARwPnF.png)
+>[!NOTE]
+> <h3>Example of a transit gateway</h3>
+> <img src="https://i.imgur.com/uARwPnF.png" alt="">
+
 # Section 4 VPC security
 ## Security Groups
 They act as a virtual firewall for a instance 
@@ -259,12 +285,14 @@ Security Groups:
 - Default allows all outbound and deny all inbound
 - They are stateful (return traffic is allowed regardless of rules)
 - All rules are evaluated before the decision to allow traffic
->[!example] Example of a security group
->![](https://i.imgur.com/ZBQa11M.png)
+>[!NOTE]
+> <h3>Example of a security group</h3>
+> <img src="https://i.imgur.com/ZBQa11M.png" alt=""><br>
 >- *default SG*
 >
->![](https://i.imgur.com/5C8eq4d.png)
+> <img src="https://i.imgur.com/5C8eq4d.png" alt=""><br>
 >- Custom SG
+
 ## Network Access Control List (Network ACLs)
 It is a optional layer of security for VPC
 - Acts as a firewall controlling traffic for one or more subnets
@@ -273,8 +301,9 @@ It is a optional layer of security for VPC
 - A subnet can have 1 ACL
 - VPC automatically comes with modifiable default network ACL
 
->[!example] Example of a ACL model
->![](https://i.imgur.com/ptdIp6p.png)
+>[!NOTE]
+> <h3>Example of an ACL model</h3>
+> <img src="https://i.imgur.com/ptdIp6p.png" alt="">
 
 ACLs:
 - Separate inbound and outbound rules, can either allow or deny traffic
@@ -283,14 +312,18 @@ ACLs:
 - Custom ACLs deny all inbound and outbound until rules are added
 - Rules are evaluated in ascending order of rule number
 
->[!example] Example of a ACL
->![](https://i.imgur.com/Skhb6Dn.png)
->*Default*
->![](https://i.imgur.com/mZ5sLYU.png)
->Custom
+>[!NOTE]
+> <h3>Example of an ACL</h3>
+> <img src="https://i.imgur.com/Skhb6Dn.png" alt="">
+>
+> *Default*
+> <img src="https://i.imgur.com/mZ5sLYU.png" alt="">
+> 
+> Custom
 
->[!example] Summary Table
->![](https://i.imgur.com/TKepwbK.png)
+>[!NOTE]
+> <h3>Summary Table</h3>
+> <img src="https://i.imgur.com/TKepwbK.png" alt="">
 
 # Section 5 Amazon Route 53
 It is a highly available and scalable cloud [[DNS]] web service 
@@ -301,8 +334,9 @@ It is a highly available and scalable cloud [[DNS]] web service
 
 ## DNS resolution
 
->[!info] How DNS resolution works using Route 53
->![](https://i.imgur.com/PMOpx4X.png)
+>[!TIP]
+> <h3>How DNS resolution works using Route 53</h3>
+> <img src="https://i.imgur.com/PMOpx4X.png">
 
 ## Supported routing
 1. Simple Routing
@@ -338,18 +372,22 @@ It is a highly available and scalable cloud [[DNS]] web service
 - Can configure to return multiple values (like IP addresses)
 - Used to do multiple health checks on each resource
 
->[!example] Use case of Multi-region deployment
->![](https://i.imgur.com/UzlX987.png)
+>[!NOTE]
+> <h3>Use case of Multi-region deployment</h3>
+> <img src="https://i.imgur.com/UzlX987.png" alt="">
+
 ## DNS Failover
 Improve availability of applications 
 - Configure backup and failover scenarios
 - Enable highly available multiple-Region architectures
 - Creating health checks 
 
->[!example] DNS failover for multitiered web app
->![](https://i.imgur.com/zwFzbFf.png)
->- Route 53 conducts checks on website primary
+>[!NOTE]
+> <h3>DNS failover for multitiered web app</h3>
+> <img src="https://i.imgur.com/zwFzbFf.png" alt="">
+>- Route 53 conducts checks on website primary<br>
 >- If primary website fails it will automatically switch to secondary website
+
 # Section 6 Amazon CloudFront
 ## Content delivery and network latency
 When browsing a website or streaming a video.

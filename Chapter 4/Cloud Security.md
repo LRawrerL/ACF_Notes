@@ -37,29 +37,32 @@ Services that provide basic building blocks for cloud IT
 - Provides the customer with the highest level of flexibility and management control
 - Customer responsible for managing more aspects of security
 - Customer configures the access controls
->[!example]- Example IaaS 
->**Amazon EC2** can be a **IaaS**
->- Require customer to perform all necessary security configuration and management tasks
->- Responsible for managing gues OS
+>[!NOTE]
+> <h3>Example IaaS</h3>
+> <b>Amazon EC2</b> can be a <b>IaaS</b> <br>
+> Require customer to perform all necessary security configuration and management tasks <br> 
+> Responsible for managing guest OS 
 
 PaaS:
 Services that remove the need for customers to manage underlying infrastructure
 - AWS handles the OS, database patching, firewall, and disaster recovery
 - Customer can focus on managing code and data
->[!example]- Example PaaS
->AWS Lambda and Amazon RDS
->- AWS operates the infrastructure layer, the os, and platforms.
->- Customer only need to access the endpoint to store and retrieve data
+>[!NOTE]
+> <h3>Example PaaS</h3>
+> AWS Lambda and Amazon RDS <br>
+> AWS operates the infrastructure layer, the os, and platforms. <br>
+> Customer only need to access the endpoint to store and retrieve data <br>
 
 SaaS:
 Services that provide software that is typically accessible via web browsers etc. or APIs 
 - Licensing typically pay-as-you-go
 - Customers do not need to manage infrastructure that support the service
 - AWS manages all other aspects
->[!example]- Example of a SaaS
->Amazon Chime
->- A communications service that enables you to meet, chat etc
->- Pay-as-you-go communications service
+>[!NOTE]
+> <h3>Example of a SaaS </h3>
+> Amazon Chime <br>
+> A communications service that enables you to meet, chat etc <br>
+> Pay-as-you-go communications service
 
 ## Section 2 AWS Identity and Access Management (IAM)
 Free service that allows controlled user permissions for resources or services in AWS
@@ -67,9 +70,10 @@ Free service that allows controlled user permissions for resources or services i
 - Centrally manages resources in your AWS account
 - Ability to specify exactly which **API** calls the user is authorized to make to each service
 - Manage which resources can be accessed by who, and how these resources can be accessed
->[!note] What is a resource
->Entity in an AWS account that you can work with
->Example: An Amazon EC2 instance or an Amazon S3 bucket
+>[!NOTE]
+> <h3>What is a resource</h3>
+> Entity in an AWS account that you can work with <br>
+> Example: An Amazon EC2 instance or an Amazon S3 bucket <br>
 
 ### Essential Components
 There are four IAM components:
@@ -94,9 +98,10 @@ Tool for granting temporary access to specific AWS resources in an AWS account
 - Similar to IAM user
 - Not uniquely associated with one person
 
->[!note]- Small note for IAM roles
->- Anybody can assume a role
->- Provides temporary security credentials for role session
+>[!NOTE]
+> <h4>Small note for IAM roles</h4>
+> Anybody can assume a role <br>
+> Provides temporary security credentials for role session
 
 #### Types Authentication as a IAM user
 When defining an **IAM user**, you can select the **types of access** methods
@@ -124,28 +129,33 @@ Generating token:
 - U2F security devices
 - Hardware MFA devices
 
->[!example]- Some examples of generating tokens
->Virtual MFA-compliant applications:
->- Google Authenticator 
->- Authy2
->U2F security key devices:
->- Yubikey
->Hardware MFA options:
->- Key fob or display card offered by Gemalto
+>[!NOTE]
+> <h3>Some examples of generating tokens</h3>
+> Virtual MFA-compliant applications: <br>
+> Google Authenticator <br>
+> Authy2 <br>
+> U2F security key devices: <br>
+> Yubikey <br>
+> Hardware MFA options: <br>
+> Key fob or display card offered by Gemalto
 
 ### Authorization
 It is the process after authentication of determining what permissions a user, service, or application have.
 - By default IAM users do not have any permission
 - Must explicitly grant permissions by creating policies
->[!note] Quick note on policies *will be covered later*
->A document in JSON format 
->- Specifies permissions
-- Best practice is to follow principle of least privilege 
->[!info]- What is "Principle of Least Privilege?"
->Stat with a minimum set of permissions a and then grant more as needed. 
+>[!NOTE]
+> <h3>Quick note on policies *will be covered later*</h3>
+> A document in JSON format <br>
+> Specifies permissions <br>
 
->[!note]- IAM service configurations
->It is global and apply to all regions
+- Best practice is to follow principle of least privilege 
+>[!IMPORTANT]
+> <h3>What is "Principle of Least Privilege?"</h3>
+> Stat with a minimum set of permissions a and then grant more as needed. 
+
+>[!NOTE]
+> <h3>IAM service configurations</h3>
+> It is global and apply to all regions
 
 ### IAM policies
 Formal state of permissions that is granted to an entity
@@ -156,10 +166,11 @@ Formal state of permissions that is granted to an entity
 Entities:
 - Users, groups, roles, or resources
 
->[!note] What policies specify
->- The type of action allowed on a entity
->- Which resources to allow the actions on
->- What effect will be when user requests access to resoruce
+>[!NOTE]
+> <h3>What policies specify</h3>
+> The type of action allowed on an entity <br>
+> Which resources to allow the actions on <br>
+> What effect will be when a user requests access to resource <br>
 
 The basic structure of the statements in an IAM Policy is:
 - **Effect** says whether to _Allow_ or _Deny_ the permissions. 
@@ -197,12 +208,13 @@ These policies are attached to a **resource**
 - Inline only `defined on resource itself`
 - Supported by some AWS services
 
->[!example]- Example of resource and identity policies
->![](https://i.imgur.com/vzUSpFx.png)
->Left side:
->Policy is attached to `MaryMajor` and allows access to S3 bucket
->Right side:
->Policy on the S3 bucket specifies that `MaryMajor` has access to the bucket
+>[!NOTE]
+> <h3>Example of resource and identity policies</h3>
+> ![](https://i.imgur.com/vzUSpFx.png) <br>
+> Left side: <br>
+> Policy is attached to `MaryMajor` and allows access to S3 bucket <br>
+> Right side: <br>
+> Policy on the S3 bucket specifies that `MaryMajor` has access to the bucket
 
 #### IAM Permission
 IAM has a certain way to determine permissions.
@@ -289,11 +301,12 @@ Data at rest:
 - Data stored physically 
 - Can encrypt data stored in any service that is supported by KMS
 
->[!example] Examples of data that can be encrypted
->- S3
->- EBS
->- EFS
->- RDS 
+>[!NOTE]
+> <h3>Examples of data that can be encrypted</h3>
+> S3<br>
+> EBS<br>
+> EFS<br>
+> RDS<br>
 
 #### Encryption in transit
 Data in transit:
@@ -324,6 +337,4 @@ Provides on demand downloads of AWS security and compliance documents
 - Accessed directly through management console 
 - Can use to review, accept and track status of AWS agreements
 - You can accept an agreement on behalf of multiple accounts needs a OU 
-
-
 
