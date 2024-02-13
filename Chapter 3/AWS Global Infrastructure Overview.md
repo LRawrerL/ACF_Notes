@@ -21,7 +21,8 @@ Zone
 - Consist of discrete data centers
 - Typically 3 data centers
 
->[!note]- For more resiliency
+>[!note]
+> **For more resiliency**<br>
 >Recommended to replicate data and resources between availability zones 
 
 #### Selecting a Region
