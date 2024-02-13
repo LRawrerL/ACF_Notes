@@ -438,6 +438,7 @@ Benefits
 ## Containers VS Virtual Machines
 
 <img src="https://i.imgur.com/Kt5Za9m.png" alt="">
+
 - 1 EC2 for many containers compared to multiple EC2s for multiple VMS
 - 1 : Many
 - Many  : Many
@@ -462,7 +463,7 @@ Tasks:
 - ECS task scheduler is responsible for assigning and placing tasks in a cluster
 
 >[!NOTE]
-> <img src="https://i.imgur.com/koqvdVf.png" alt="">
+> <img src="https://i.imgur.com/koqvdVf.png" alt=""><br>
 > EC2 instance running ECS container agent
 
 ### AWS Fargate
