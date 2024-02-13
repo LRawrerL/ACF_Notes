@@ -1,10 +1,10 @@
 # Legend
-- [[#Types of Storage]]
-- [[#Storage Options]]
-- [[#Section 1 Elastic Block Store]]
-- [[#Section 2 S3]]
-- [[#Section 3 Elastic File System]]
-- [[#Section 4 S3 Glacier]]
+- [Types of Storage](#Types%20of%20Storage)
+- [Storage Options](#Storage%20Options)
+- [Section 1 Elastic Block Store](#Section%201%20Elastic%20Block%20Store)
+- [Section 2 S3](#Section%202%20S3)
+- [#Section 3 Elastic File System](#Section%203%20Elastic%20File%20System)
+- [Section 4 S3 Glacier](#Section%204%20S3%20Glacier)
 
 
 # Types of Storage
@@ -19,9 +19,9 @@ Two types of storage available
 - Block
 - Object
 
->[!note] High Level Overview
->![](https://i.imgur.com/B19xk0m.png)
-
+>[!NOTE]
+> <h3>High Level Overview</h3>
+> <img src="https://i.imgur.com/B19xk0m.png" alt="">
 
 Block storage:
 - Only change a piece of the file 
@@ -75,14 +75,16 @@ Uses of EBS:
 
 ## Volume types
 
->[!note] Table about volume types
->![](https://i.imgur.com/DpUsRNe.png)
->- Only SSDs can be used as boot volumes for EC2 Instance
+>[!NOTE]
+> <h3>Table about volume types</h3>
+> <img src="https://i.imgur.com/DpUsRNe.png" alt=""><br>
+> - Only SSDs can be used as boot volumes for EC2 Instance
 
 ### Volume type use cases
 
->[!note] Table about use cases
->![](https://i.imgur.com/sAt1lNi.png)
+>[!NOTE]
+> <h3>Table about use cases</h3>
+> <img src="https://i.imgur.com/sAt1lNi.png" alt="">
 
 ## Pricing
 ### Volumes
@@ -205,14 +207,16 @@ Uploading data
 - Create bucket in region
 - Upload object 
 
->[!note] Two types of URLs
->![](https://i.imgur.com/GhTOFUe.png)
+>[!NOTE]
+> <h3>Two types of URLs</h3>
+> <img src="https://i.imgur.com/GhTOFUe.png" alt="">
 
 ## Data is redundantly stored in the region
 - Creating buckets and storage of data in them are stored across multiple AZ within the region
 
->[!note] Image on replication
->![](https://i.imgur.com/qgDPfMW.png)
+>[!NOTE]
+> <h3>Image on replication</h3>
+> <img src="https://i.imgur.com/qgDPfMW.png" alt="">
 
 ## Designed for Seamless Scaling
 - S3 automatically manages stored in bucket when data grows
@@ -289,10 +293,11 @@ Used cases:
 
 ## EFS Architecture
 
->[!note] High level Overview of mounting an EFS to VPC
->![](https://i.imgur.com/NTD54MF.png)
->- 1 mount target per AZ and only can be in 1 subnet
->- However can just access mount target from other AZ but not recommended
+>[!NOTE]
+> <h3>High level Overview of mounting an EFS to VPC</h3>
+> <img src="https://i.imgur.com/NTD54MF.png" alt="">
+> - 1 mount target per AZ and only can be in 1 subnet <br>
+> - However can just access mount target from other AZ but not recommended
 
 Mountings:
 - Mount EFS directly onto EC2 Instance with Linux AMI
@@ -356,8 +361,9 @@ Go to Internal Sections:
 
 ## What is Glacier?
 
->[!note] Quick high level overview
->![](https://i.imgur.com/VaoE0yo.png)
+>[!NOTE]
+> <h3>Quick high level overview</h3>
+> <img src="https://i.imgur.com/VaoE0yo.png" alt="">
 
 
 A data archiving service designed for security, durability, and an extremely low cost
@@ -396,8 +402,9 @@ How to access
 
 ## Lifecycle policies
 
->[!note] High level overview
->![](https://i.imgur.com/xYrWD8f.png)
+>[!NOTE]
+> <h3>High level overview</h3>
+> <img src="https://i.imgur.com/xYrWD8f.png" alt="">
 
 Helps automate lifecycle of data stored in S3 
 - Reduces overall cost as you pay less for data that becomes less important
@@ -405,10 +412,11 @@ Helps automate lifecycle of data stored in S3
 
 ## Comparison Standard to Glacier
 
->[!note] Table that outlines comparisons
->![](https://i.imgur.com/czzYb5N.png)
->- Faster access means higher cost/gb per month
->- Retrieval is higher in glacier as it is designed for less-frequent access to data
+>[!NOTE]
+> <h3>Table that outlines comparisons</h3>
+> <img src="https://i.imgur.com/czzYb5N.png" alt="">
+> - Faster access means higher cost/gb per month <br>
+> - Retrieval is higher in glacier as it is designed for less-frequent access to data
 
 ## Server-side Encryption
 Both S3's are able to transfer data over HTTPS
