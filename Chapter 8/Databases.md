@@ -73,8 +73,9 @@ Access RDS via
 
 ## From on-premise to RDS
 
->[!note] Overview of the changes
->![](https://i.imgur.com/p6xqfTm.png)
+>[!NOTE]
+> <h3>Overview of the changes</h3>
+> <img src="https://i.imgur.com/p6xqfTm.png" alt="">
 
 RDS (and Aurora) is like a PaaS
 - User manages and focuses on application only
@@ -82,8 +83,9 @@ RDS (and Aurora) is like a PaaS
 
 ## RDS DB Instances
 
->[!note] High level overview
->![](https://i.imgur.com/UwbaJte.png)
+>[!NOTE]
+> <h3>High level overview</h3>
+> <img src="https://i.imgur.com/UwbaJte.png" alt="">
 
 A basic building block is a database instance (DB instance)
 - Isolated DB environment 
@@ -97,11 +99,13 @@ A basic building block is a database instance (DB instance)
 In VPC will run the same
 - Usually in isolated private subnet made accessible to indicated application instances
 
->[!note] Basic topology
->![](https://i.imgur.com/ETMYNGp.png)
+>[!NOTE]
+> <h3>Basic topology</h3>
+> <img src="https://i.imgur.com/ETMYNGp.png" alt="">
 
->[!note] High availability with Multi-AZ topology
->![](https://i.imgur.com/l7hNpOF.png)
+>[!NOTE]
+> <h3>High availability with Multi-AZ topology</h3>
+> <img src="https://i.imgur.com/l7hNpOF.png" alt="">
 >- Can configure to create a standby copy in another AZ, all stuff that happens are synced so it will keep updating
 >- Increases availability and protect against failure 
 >- If failure, the standby will become main instance
@@ -109,8 +113,9 @@ In VPC will run the same
 
 ## RDS read replicas
 
->[!note] High level overview
->![](https://i.imgur.com/RlvP1SF.png)
+>[!NOTE]
+> <h3>High level overview</h3>
+> <img src="https://i.imgur.com/RlvP1SF.png" alt="">
 
 
 RDS supports creation of read replicas for:
@@ -215,8 +220,9 @@ Go to Internal Sections:
 
 ## Relationship vs Non-relational
 
->[!note] Table explaining differences
->![](https://i.imgur.com/2mnG6RV.png)
+>[!NOTE]
+> <h3>Table explaining differences</h3>
+> <img src="https://i.imgur.com/2mnG6RV.png" alt="">
 
 **Relational Database:** 
 - Relational database (RDB) works with structured data organized by tables and columns 
@@ -255,14 +261,16 @@ DynamoDB supports two different kinds of primary keys
 - Partition key -> A simple primary key, made out of one attribute called the sort key (Items in data are identified with their unique record)
 - Composite primary key -> Partition key and sort key, composed of two attributes (Used to sort partitioned data)
 
->[!note] Primary key
->![](https://i.imgur.com/1uo8m8T.png)
+>[!NOTE]
+> <h3>Primary key</h3>
+> <img src="https://i.imgur.com/1uo8m8T.png" alt="">
 
 
 ## Partitioning in DynamoDB
 
->[!note] Image on partitioning
->![](https://i.imgur.com/etGGOEx.png)
+>[!NOTE]
+> <h3>Image on partitioning</h3>
+> <img src="https://i.imgur.com/etGGOEx.png" alt="">
 
 Table data is partitioned and indexed by primary key
 
@@ -280,16 +288,20 @@ Scan operation
 
 Important to think about the key that you use to identify items
 
->[!note] Single vs Compound keys
->![](https://i.imgur.com/1Wz2AE0.png)
->>[!question] Quick explanation on keys
->>- A single key means the data is identified by an item in the data that uniquely identifies each record. 
->>- A compound key is made up of a partition key and a second key that can be used for sorting data.
+>[!NOTE]
+> <h3>Single vs Compound keys</h3>
+> <img src="https://i.imgur.com/1Wz2AE0.png" alt="">
+
+>[!TIP]
+> <h3>Quick explanation on keys</h3>
+> - A single key means the data is identified by an item in the data that uniquely identifies each record. <br>
+> - A compound key is made up of a partition key and a second key that can be used for sorting data.
 
 We are able to setup a simple primary key based on 1 attribute of data values with uniform distribution
 - Distribution such as Globally Unique Identifier (GUID) etc.
 
->[!example]- Some use cases
+>[!NOTE]
+> <h3>Some use cases</h3>
 > If you wanted to model a table with products, you could use some attributeslike the product ID. Alternatively, you can specify a compound key, which is composed of a partition key and a secondary key. In this example, if you had a table with books, youmight use the combination of author and title to uniquely identify table items. This method could be useful if you expect to frequently look at books by authorbecause you couldthen use query.
 
 # Section 3 Redshift
@@ -320,8 +332,9 @@ It is a fully managed data warehouse
 
 ## Introduction to Redshift
 
->[!note] High Level Overview
->![](https://i.imgur.com/2XwNS4e.png)
+>[!NOTE]
+> <h3>High Level Overview</h3>
+> <img src="https://i.imgur.com/2XwNS4e.png" alt="">
 
 Reason for moving to Redshift
 - building a data warehouse is complex and expensive
@@ -340,8 +353,9 @@ Redshift additional features:
 
 ## Parallel Processing Architecture
 
->[!note] High level Overview of Parallel Processing Architecture
->![](https://i.imgur.com/YQpfEEJ.png)
+>[!NOTE]
+> <h3>High level Overview of Parallel Processing Architecture</h3>
+> <img src="https://i.imgur.com/YQpfEEJ.png" alt="">
 
 Leader Node:
 - Manages communications with client programs and all communications with compute nodes
@@ -356,8 +370,9 @@ Leader Node:
 
 ## Automation and scaling
 
->[!note] High level overview
->![](https://i.imgur.com/q0lXd3y.png)
+>[!NOTE]
+> <h3>High level overview</h3>
+> <img src="https://i.imgur.com/q0lXd3y.png" alt="">
 
 
 From redshift cluster
@@ -420,8 +435,9 @@ A MySQL and PostgreSQL compatible enterprise relational database for the cloud
 
 ## Benefits of Aurora
 
->[!note] Quick Overview of Benefits
->![](https://i.imgur.com/utUN3o6.png)
+>[!NOTE]
+> <h3>Quick Overview of Benefits</h3>
+> <img src="https://i.imgur.com/utUN3o6.png" alt="">
 
 Benefits:
 - Fast distributed storage subsystem
@@ -432,8 +448,9 @@ Benefits:
 
 ## Aurora has high availability
 
->[!note] Overview of availability
->![](https://i.imgur.com/Hj81aP3.png)
+>[!NOTE]
+> <h3>Overview of availability</h3>
+> <img src="https://i.imgur.com/Hj81aP3.png" alt="">
 
 Aurora has high availability and resilient design
 - Stores multiple copies of data across multiple AZs 

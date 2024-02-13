@@ -8,8 +8,9 @@
 
 ### What does EBL do?
 
->[!note] High Level Overview
->![](https://i.imgur.com/vMlX912.png)
+>[!NOTE]
+> <h3>High Level Overview</h3>
+> <img src="https://i.imgur.com/vMlX912.png" alt="">
 
 It is a service that **distributes** the **incoming application** or **network traffic** across multiple **targets** in a **single AZ** or **multiple AZs**
 - Targets -> EC2s, containers, IP addresses, and lambda functions
@@ -142,8 +143,10 @@ When creating a Static Threshold Alarm we need to specify
 
 ## Why is scaling important
 
->[!note] Graph showing usage
->![](https://i.imgur.com/UKCLiM7.png)
+>[!NOTE]
+> <h3>Graph showing usage</h3>
+> <img src="https://i.imgur.com/UKCLiM7.png" alt="">
+
 - We need to increase/decrease capacity of application to adopt to varying workloads (dynamic)
 - Provision **what we need** to use Provision **less** when **demand is less** Provision **more** when **demand is more**
 - Leads to reduced cost
@@ -159,8 +162,9 @@ Auto-scaling provides several ways to adjust scaling
 
 ### Auto Scaling Groups
 
->[!note] High Level Overview 
->![](https://i.imgur.com/k7SnoYi.png)
+>[!NOTE]
+> <h3>High Level Overview </h3>
+> <img src="https://i.imgur.com/k7SnoYi.png" alt="">
 
 It is a **collection** of EC2 instances that is treated as a logical grouping
 - **Initial size** of group depends on number of **Desired Capacity**
@@ -170,8 +174,9 @@ It is a **collection** of EC2 instances that is treated as a logical grouping
 
 ### Scaling out versus scaling in
 
->[!note] Overview on scaling in and out
->![](https://i.imgur.com/WpCPLWd.png)
+>[!NOTE]
+> <h3>Overview on scaling in and out</h3>
+> <img src="https://i.imgur.com/WpCPLWd.png" alt="">
 
 Also called horizontal scaling
 - When launching instances -> Scaling out
@@ -179,8 +184,9 @@ Also called horizontal scaling
 
 ### How auto scaling works
 
->[!note] High Level Overview
->![](https://i.imgur.com/owMcqSi.png)
+>[!NOTE]
+> <h3>High Level Overview</h3>
+> <img src="https://i.imgur.com/owMcqSi.png" alt="">
 
 To launch EC2 Instances
 - Auto scaling group uses a launch configuration which is a instance configuration template 
@@ -215,17 +221,21 @@ When you want scaling event to occur
 
 ### Implementing Dynamic Scaling
 
->[!note] High Level Overview
->![](https://i.imgur.com/VSff1NF.png)
+>[!NOTE]
+> <h3>High Level Overview</h3>
+> <img src="https://i.imgur.com/VSff1NF.png" alt="">
+
 - Use cloud watch, elastic load balancing, and ec2 auto scaling
 - A common configuration for dynamic scaling involves CW alarm based on performance info from EC2 instances or LB
 - Cloud watch Alarm will trigger the EC2 auto scaling
 - CW, EC2 AS and ELB work well individually but they work even better together that increases control and flexibility of handling demand
->[!example] On overview
->- You create an Amazon CloudWatch alarm to monitor CPU utilization across your fleet of EC2 instances and run automatic scaling policies if the average CPU utilization across the fleet goes above 60 percent for 5 minutes.
->- Amazon EC2 Auto Scaling instantiates a new EC2 instance into your Auto Scaling group based on the launch configuration that you create.
->- After the new instance is added, Amazon EC2 Auto Scaling makes a call to Elastic Load Balancing to register the new EC2 instance in that Auto Scaling group.
->- Elastic Load Balancing then performs the required health checks and starts distributing traffic to that instance. Elastic Load Balancing routes traffic between EC2 instances and feeds metrics to Amazon CloudWatch.
+
+>[!TIP]
+> <h3>On overview</h3>
+> - You create an Amazon CloudWatch alarm to monitor CPU utilization across your fleet of EC2 instances and run automatic scaling policies if the average CPU utilization across the fleet goes above 60 percent for 5 minutes. <br>
+> - Amazon EC2 Auto Scaling instantiates a new EC2 instance into your Auto Scaling group based on the launch configuration that you create. <br>
+> - After the new instance is added, Amazon EC2 Auto Scaling makes a call to Elastic Load Balancing to register the new EC2 instance in that Auto Scaling group. <br>
+> - Elastic Load Balancing then performs the required health checks and starts distributing traffic to that instance. Elastic Load Balancing routes traffic between EC2 instances and feeds metrics to Amazon CloudWatch. <br>
 
 ## AWS Auto Scaling
 A **separate service from EC2 AS** that monitors applications and auto adjusts capacity to maintain predictive performance at lowest possible cost
