@@ -199,15 +199,16 @@ Restrictions:
 - IP address ranges cannot overlap
 - Transitive peering is not supported
 - Only one peering resource between two same VPCS
->[!example] Example of transitive peering
->```mermaid
+>[!TIP]
+> <h3>Example of transitive peering</h3>
+> - A communicates with B and vice versa.
+> - A communicates with C
+> - B communicates with C via A
+```mermaid
 flowchart LR
 A <---> B
 A ---> C
->```
->- A communicates with B and vice versa.
->- A communicates with C
->- B communicates with C via A
+```
 
 >[!NOTE]
 > <h3>Example of a VPC peering model</h3>
