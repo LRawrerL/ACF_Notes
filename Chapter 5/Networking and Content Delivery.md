@@ -317,7 +317,7 @@ ACLs:
 > <h3>Example of an ACL</h3>
 > <img src="https://i.imgur.com/Skhb6Dn.png" alt="">
 >
-> *Default*
+> *Default*<br>
 > <img src="https://i.imgur.com/mZ5sLYU.png" alt="">
 > 
 > Custom
@@ -385,9 +385,9 @@ Improve availability of applications
 
 >[!NOTE]
 > <h3>DNS failover for multitiered web app</h3>
-> <img src="https://i.imgur.com/zwFzbFf.png" alt="">
->- Route 53 conducts checks on website primary<br>
->- If primary website fails it will automatically switch to secondary website
+> <img src="https://i.imgur.com/zwFzbFf.png" alt=""> <br>
+> - Route 53 conducts checks on website primary<br>
+> - If primary website fails it will automatically switch to secondary website
 
 # Section 6 Amazon CloudFront
 ## Content delivery and network latency
