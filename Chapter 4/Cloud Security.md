@@ -178,8 +178,9 @@ The basic structure of the statements in an IAM Policy is:
 - **Resource** defines the scope of entities covered by the policy rule 
 
 
->[!example] An example policy
->![](https://i.imgur.com/weh3yOU.png)
+>[!TIP]
+> <h3>An example policy</h3>
+> <img src="https://i.imgur.com/weh3yOU.png" alt="">
 >Explicit denies in policies take precedence over allow statements
 
 There are two types of IAM policies:
@@ -210,7 +211,7 @@ These policies are attached to a **resource**
 
 >[!NOTE]
 > <h3>Example of resource and identity policies</h3>
-> ![](https://i.imgur.com/vzUSpFx.png) <br>
+> <img src="https://i.imgur.com/vzUSpFx.png" alt="">
 > Left side: <br>
 > Policy is attached to `MaryMajor` and allows access to S3 bucket <br>
 > Right side: <br>
