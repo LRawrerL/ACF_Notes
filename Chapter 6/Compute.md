@@ -51,8 +51,9 @@ AMIs to choose:
 - Marketplace -> Software solutions 
 - Community AMIs -> Not checked by AWS
 #### Creating a new AMI
->[!note] Quick Overview of creating a AMI
->![](https://i.imgur.com/eZfUssw.png)
+>[!NOTE]
+> <h3>Quick Overview of creating a AMI</h3>
+> <img src="https://i.imgur.com/eZfUssw.png" alt="">
 
 AMI is created from an EC2 instance
 - Can import a virtual machine so it becomes a EC2 instance then save it as an AMI
@@ -72,8 +73,9 @@ EC2 provides a selection of instance types to fit different cases
 - Instance type has 1 or more instance size
 - Offers family, generation and size
 #### Naming and sizes
->[!info] Simplicity sake
->For example `t3.large` will be broken down into `FN.T`
+>[!NOTE]
+> <h3>Simplicity sake</h3>
+> For example <code>t3.large</code> will be broken down into <code>FN.T</code>
 
 F:
 - Family name 
@@ -84,9 +86,10 @@ N:
 T: 
 - Size of EC2
 
->[!example] Previous example
+>[!NOTE]
+> Previous example
 >
-Going with the previous example `t3.large`:
+> Going with the previous example <code>t3.large</code>:
 >- T is family name
 >- 3 is generation
 >- large is size
@@ -165,8 +168,9 @@ Each volume:
 - If instance is stopped, data will be deleted
 - If instance rebooted, data will remain
 
->[!note] Instances that only have Instance Store
->An instance with an Instance Store root volume cannot be stopped by an Amazon EC2 API, only can be **stopped within system** which causes termination or **manually terminated**
+>[!NOTE]
+> <h3>Instances that only have Instance Store</h3>
+> An instance with an Instance Store root volume cannot be stopped by an Amazon EC2 API, only can be **stopped within system** which causes termination or **manually terminated**
 
 call. It can only be terminated.
 
@@ -235,17 +239,19 @@ AMIs
 
 EC2 instances can also be created programmatically (via AWS CLI or AWS SDK)
 
->[!note] Example command on CLI
->![](https://i.imgur.com/tHDjq3Z.png)
->![](https://i.imgur.com/FUAIExm.png)
+>[!NOTE]
+> <h3>Example command on CLI</h3>
+> <img src="https://i.imgur.com/tHDjq3Z.png" alt="">
+> <img src="https://i.imgur.com/FUAIExm.png" alt="">
 
 
 
 
 ## Amazon EC2 instance Lifecycle
 
->[!note] High level flow chart overview
->![](https://i.imgur.com/aa2FMKW.png)
+>[!NOTE]
+> <h3>High level flow chart overview</h3>
+> <img src="https://i.imgur.com/aa2FMKW.png" alt="">
 
 Pending:
 - Instance is first launched
@@ -431,7 +437,7 @@ Benefits
 
 ## Containers VS Virtual Machines
 
-![](https://i.imgur.com/Kt5Za9m.png)
+<img src="https://i.imgur.com/Kt5Za9m.png" alt="">
 - 1 EC2 for many containers compared to multiple EC2s for multiple VMS
 - 1 : Many
 - Many  : Many
@@ -455,9 +461,9 @@ Tasks:
 - A task is the starting of a task definition in a cluster
 - ECS task scheduler is responsible for assigning and placing tasks in a cluster
 
->[!note]
->![](https://i.imgur.com/koqvdVf.png)
->- EC2 instance running ECS container agent
+>[!NOTE]
+> <img src="https://i.imgur.com/koqvdVf.png" alt="">
+> EC2 instance running ECS container agent
 
 ### AWS Fargate
 - Manages and configures EC2 clusters for ECS
@@ -468,8 +474,9 @@ Three options when creating a cluster:
 - EC2 Linux + Networking 
 - EC2 Windows + Networking
 
->[!note] High level Overview of options
->![](https://i.imgur.com/iGZi18G.png)
+>[!NOTE]
+> <h3>High level Overview of options</h3>
+> <img src="https://i.imgur.com/iGZi18G.png" alt="">
 
 When choosing EC2 option:
 - Choose spot or on-demand
@@ -494,8 +501,9 @@ A fully managed Docker container register
 
 # Section 5 AWS Lambda
 
->[!note] High level overview
->![](https://i.imgur.com/7FYwsXQ.png)
+>[!NOTE]
+> <h3>High level overview</h3>
+> <img src="https://i.imgur.com/7FYwsXQ.png" alt="">
 
 ## What is it?
 A another approach to compute
@@ -517,8 +525,9 @@ A another approach to compute
 
 ## Event Source
 
->[!note] High level Overview
->![](https://i.imgur.com/OzB2cjt.png)
+>[!NOTE]
+> <h3>High level Overview</h3>
+> <img src="https://i.imgur.com/OzB2cjt.png" alt="">
 
 A AWS service or developer-created application that produces events that trigger a function to run
 
@@ -542,8 +551,9 @@ Lambda monitors its functions using Cloud Watch automatically
 
 ## Function configuration
 
->[!note] High level overview of creating functions
->![](https://i.imgur.com/e8a2GmK.png)
+>[!NOTE]
+> <h3>High level overview of creating functions</h3>
+> <img src="https://i.imgur.com/e8a2GmK.png" alt="">
 
 When creating a function through management console includes:
 - Function name
@@ -564,11 +574,13 @@ Lambda API
 
 ## Examples
 
->[!info] Schedule-based
->![](https://i.imgur.com/AIbHJf2.png)
+>[!IMPORTANT]
+> <h3>Schedule-based</h3>
+> <img src="https://i.imgur.com/AIbHJf2.png" alt="">
 
->[!info] Event-based Lambda function
->![](https://i.imgur.com/ThVQ0gC.png)
+>[!IMPORTANT]
+> <h3>Event-based Lambda function</h3>
+> <img src="https://i.imgur.com/ThVQ0gC.png" alt="">
 
 ## Lambda Limits
 
@@ -608,8 +620,9 @@ Afterwards:
 
 ## Deployments on Elastic Beanstalk
 
->[!note] High level overview of deployment
->![](https://i.imgur.com/CzE9Nmv.png)
+>[!NOTE]
+> <h3>High level overview of deployment</h3>
+> <img src="https://i.imgur.com/CzE9Nmv.png" alt="">
 
 
 Multiple ways to deploying code:
