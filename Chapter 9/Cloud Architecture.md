@@ -5,8 +5,9 @@ Legend:
 
 ## Architecture 
 
->[!note] Overview of how Architects create a structure
->![](https://i.imgur.com/0nxGLdy.png)
+>[!NOTE]
+> <h3>Overview of how Architects create a structure</h3>
+> <img src="https://i.imgur.com/0nxGLdy.png" alt="">
 
 
 It is about designing and building large structures
@@ -350,21 +351,23 @@ It is a measure of the system's ability to provide functionality when desired by
 
 ## Reliability metrics
 
->[!note] High level overview
->![](https://i.imgur.com/qMiSkHt.png)
+>[!NOTE]
+> <h3>High level overview</h3>
+> <img src="https://i.imgur.com/qMiSkHt.png" alt="">
 
->[!question] Example calculations
->Applications starts on Monday dat Noon
->- Functions normally until Friday noon
->- Time to Failure (length of time it was functioning) = 96 hours
->- Friday noon till Monday noon fixing it
->- Time to Repair = 72 hours
->- It repeats every week
->- Average of the numbers
->- MTTF (to failure) = 96 hour
->- MTTR (to repair) = 72 hours
->- MTBF (between failure) = 168 hours (1week)
->- MTBF is also MTTF + MTTR
+>[!TIP]
+> <h3>Example calculations</h3>
+> Applications starts on Monday dat Noon <br>
+> - Functions normally until Friday noon <br>
+> - Time to Failure (length of time it was functioning) = 96 hours <br>
+> - Friday noon till Monday noon fixing it <br>
+> - Time to Repair = 72 hours <br>
+> - It repeats every week <br>
+> - Average of the numbers <br>
+> - MTTF (to failure) = 96 hour <br>
+> - MTTR (to repair) = 72 hours <br>
+> - MTBF (between failure) = 168 hours (1week) <br>
+> - MTBF is also MTTF + MTTR
 
 ## Availability
 
@@ -388,8 +391,9 @@ A highly available system can be viewed as a set of system-wide shared resources
 
 ## Availability Tiers
 
->[!note] Table on availability tiers
->![](https://i.imgur.com/O6sCdIU.png)
+>[!NOTE]
+> <h3>Table on availability tiers</h3>
+> <img src="https://i.imgur.com/O6sCdIU.png" alt="">
 
 ## Factors that influence availability
 
