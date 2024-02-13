@@ -105,10 +105,10 @@ In VPC will run the same
 
 >[!NOTE]
 > <h3>High availability with Multi-AZ topology</h3>
-> <img src="https://i.imgur.com/l7hNpOF.png" alt="">
->- Can configure to create a standby copy in another AZ, all stuff that happens are synced so it will keep updating
->- Increases availability and protect against failure 
->- If failure, the standby will become main instance
+> <img src="https://i.imgur.com/l7hNpOF.png" alt=""><br>
+>- Can configure to create a standby copy in another AZ, all stuff that happens are synced so it will keep updating<br>
+>- Increases availability and protect against failure <br>
+>- If failure, the standby will become main instance<br>
 >- Applications will reference the database by using the same RDS DNS endpoint, user no need change code to let services access standby instance
 
 ## RDS read replicas
@@ -327,8 +327,9 @@ It is a fully managed data warehouse
 - Uses standard SQL 
 - Uses your existing business intelligence (BI) tools
 
->[!question] What is a data warehouse
->- Data warehouses are used for analysis and reporting of data from multiple sources
+>[!TIP]
+> <h3>What is a data warehouse</h3>
+> - Data warehouses are used for analysis and reporting of data from multiple sources
 
 ## Introduction to Redshift
 
