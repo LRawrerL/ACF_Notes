@@ -414,7 +414,7 @@ Helps automate lifecycle of data stored in S3
 
 >[!NOTE]
 > <h3>Table that outlines comparisons</h3>
-> <img src="https://i.imgur.com/czzYb5N.png" alt="">
+> <img src="https://i.imgur.com/czzYb5N.png" alt=""> <br>
 > - Faster access means higher cost/gb per month <br>
 > - Retrieval is higher in glacier as it is designed for less-frequent access to data
 
